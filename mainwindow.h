@@ -2,11 +2,6 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <QPushButton>
-#include <QLCDNumber>
-#include <QSpinBox>
-
-#include "timer.h"
 
 namespace Ui {
 class MainWindow;
@@ -20,20 +15,14 @@ public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
-public slots:
-    void startButtonClicked();
-    void stopButtonClicked();
-    void onTick();
 
 private:
     Ui::MainWindow *ui;
-    Timer timer;
-    QPushButton *startButton;
-    QPushButton *stopButton;
-    QLCDNumber *display;
-    QSpinBox *hourSpinBox;
-    QSpinBox *minSpinBox;
-    QSpinBox *secSpinBox;
+    QTabWidget *tabWidget;
+    QWidget *timerTabPage;
+    QWidget *clockTabPage;
+    QWidget *stopwatchTabPage;
+    QWidget *alarmTabPage;
 };
 
 #endif // MAINWINDOW_H

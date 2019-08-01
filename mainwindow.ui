@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>490</width>
+    <width>492</width>
     <height>309</height>
    </rect>
   </property>
@@ -18,102 +18,8 @@
     <item>
      <widget class="QTabWidget" name="tabWidget">
       <property name="currentIndex">
-       <number>0</number>
+       <number>-1</number>
       </property>
-      <widget class="QWidget" name="tab_timer">
-       <attribute name="title">
-        <string>Timer</string>
-       </attribute>
-       <layout class="QVBoxLayout" name="verticalLayout_7">
-        <item>
-         <widget class="QLCDNumber" name="lcdNumber">
-          <property name="digitCount">
-           <number>8</number>
-          </property>
-          <property name="mode">
-           <enum>QLCDNumber::Hex</enum>
-          </property>
-          <property name="value" stdset="0">
-           <double>0.000000000000000</double>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_4">
-          <item>
-           <widget class="QSpinBox" name="spinBox_hours">
-            <property name="suffix">
-             <string> Hours</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QSpinBox" name="spinBox_minutes">
-            <property name="suffix">
-             <string> Minutes</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QSpinBox" name="spinBox_seconds">
-            <property name="suffix">
-             <string> Seconds</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <spacer name="horizontalSpacer">
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>40</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-          <item>
-           <layout class="QVBoxLayout" name="verticalLayout">
-            <item>
-             <widget class="QPushButton" name="pushButton_start">
-              <property name="text">
-               <string>Start Timer</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="pushButton_stop">
-              <property name="text">
-               <string>Stop Timer</string>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-         </layout>
-        </item>
-       </layout>
-      </widget>
-      <widget class="QWidget" name="tab_clock">
-       <attribute name="title">
-        <string>Clock</string>
-       </attribute>
-       <layout class="QVBoxLayout" name="verticalLayout_5"/>
-      </widget>
-      <widget class="QWidget" name="tab_stopwatch">
-       <attribute name="title">
-        <string>Stopwatch</string>
-       </attribute>
-       <layout class="QVBoxLayout" name="verticalLayout_6"/>
-      </widget>
-      <widget class="QWidget" name="tab_alarm">
-       <attribute name="title">
-        <string>Alarm</string>
-       </attribute>
-       <layout class="QGridLayout" name="gridLayout_3"/>
-      </widget>
      </widget>
     </item>
    </layout>
@@ -132,7 +38,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>490</width>
+     <width>492</width>
      <height>28</height>
     </rect>
    </property>
