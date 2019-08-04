@@ -2,11 +2,12 @@
 #define TIMERPAGEWIDGET_H
 
 #include <QWidget>
-#include "timer.h"
 #include <QPushButton>
 #include <QLCDNumber>
 #include <QSpinBox>
 #include <QTabWidget>
+#include <QTime>
+#include <QTimer>
 
 namespace Ui {
 class TimerPageWidget;
@@ -21,23 +22,23 @@ public:
     ~TimerPageWidget();
 
 public slots:
-    void startButtonClicked();
+    void startTimer();
     void stopTimer();
     void onTick();
 
 private:
     Ui::TimerPageWidget *ui;
-    Timer timer;
     QPushButton *startButton;
     QPushButton *stopButton;
     QLCDNumber *timeDisplay;
     QSpinBox *hourSpinBox;
     QSpinBox *minSpinBox;
     QSpinBox *secSpinBox;
-    QTime *startTime;
-    QTimer *myTimer;
+    QTime clock;
+    QTimer ticker;
     int totalSecs;
     int idx;
+    void notifyComplete();
 };
 
 #endif // TIMERPAGEWIDGET_H

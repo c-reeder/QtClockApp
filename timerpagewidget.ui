@@ -34,6 +34,9 @@
        <property name="suffix">
         <string> Hours</string>
        </property>
+       <property name="maximum">
+        <number>23</number>
+       </property>
       </widget>
      </item>
      <item>
@@ -41,12 +44,18 @@
        <property name="suffix">
         <string> Minutes</string>
        </property>
+       <property name="maximum">
+        <number>59</number>
+       </property>
       </widget>
      </item>
      <item>
       <widget class="QSpinBox" name="secSpinBox">
        <property name="suffix">
         <string> Seconds</string>
+       </property>
+       <property name="maximum">
+        <number>59</number>
        </property>
       </widget>
      </item>
