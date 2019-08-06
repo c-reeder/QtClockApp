@@ -46,7 +46,7 @@ void TimerPageWidget::startTimer()
 
     totalSecs = 360 * hourSpinBox->value() + 60 * minSpinBox->value() + secSpinBox->value();
     if (clock.isNull() && totalSecs > 0) {
-        cout << "Starting!!!" << endl;
+        //cout << "Starting!!!" << endl;
         clock = QTime::currentTime();
         clock.start();
         onTick();
@@ -55,15 +55,15 @@ void TimerPageWidget::startTimer()
 }
 void TimerPageWidget::stopTimer()
 {
-    cout << "stopTimer()" << endl;
+    //cout << "stopTimer()" << endl;
     if (!clock.isNull()) {
-        cout << "stopTimer() not null" << endl;
+        //cout << "stopTimer() not null" << endl;
         //cout << "Stopping!!!" << endl;
         timeDisplay->display("00:00:00");
         clock = QTime();
         ticker.stop();
     } else {
-        cout << "NO" << endl;
+        //cout << "NO" << endl;
     }
 }
 
@@ -75,7 +75,7 @@ void TimerPageWidget::onTick()
     //printf("elapsed: %d, secsElapsed: %d, remaining: %d\n", el,secsElapsed,secsRemaining);
     if (secsRemaining <= 0) {
         //cout << "Timer Complete!!!" << endl;
-        cout << "Seconds = 0" <<  endl;
+        //cout << "Seconds = 0" <<  endl;
         stopTimer();
         notifyComplete();
     } else {
@@ -93,6 +93,6 @@ void TimerPageWidget::onTick()
 }
 void TimerPageWidget::notifyComplete()
 {
-    cout << "notifyComplete" << endl;
-    QMessageBox::information(this, tr("Timer"), tr("Time's up!"));
+    //cout << "notifyComplete" << endl;
+    QMessageBox::information(this, tr("Timer"), tr("Time's up!"), QMessageBox::Ok);
 }

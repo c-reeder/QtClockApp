@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "timerpagewidget.h"
+#include "stopwatchpagewidget.h"
 
 
 using namespace std;
@@ -13,13 +14,13 @@ MainWindow::MainWindow(QWidget *parent) :
 
     tabWidget = ui->tabWidget;
     timerTabPage = new TimerPageWidget(tabWidget);
+    stopwatchTabPage = new StopwatchPageWidget(tabWidget);
     clockTabPage = new QWidget(this);
-    stopwatchTabPage = new QWidget(this);
     alarmTabPage = new QWidget(this);
 
     tabWidget->addTab(timerTabPage,"Timer");
-    tabWidget->addTab(clockTabPage,"Clock");
     tabWidget->addTab(stopwatchTabPage,"Stopwatch");
+    tabWidget->addTab(clockTabPage,"Clock");
     tabWidget->addTab(alarmTabPage,"Alarm");
 }
 

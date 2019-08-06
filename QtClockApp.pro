@@ -27,14 +27,17 @@ CONFIG += c++11
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
+        stopwatchpagewidget.cpp \
         timerpagewidget.cpp
 
 HEADERS += \
         mainwindow.h \
+        stopwatchpagewidget.h \
         timerpagewidget.h
 
 FORMS += \
         mainwindow.ui \
+        stopwatchpagewidget.ui \
         timerpagewidget.ui
 
 # Default rules for deployment.
