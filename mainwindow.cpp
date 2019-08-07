@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 #include "timerpagewidget.h"
 #include "stopwatchpagewidget.h"
+#include <QtWidgets>
 
 
 using namespace std;
@@ -13,6 +14,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
 
     tabWidget = ui->tabWidget;
+    tabWidget->setFocusPolicy(Qt::NoFocus);
     timerTabPage = new TimerPageWidget(tabWidget);
     stopwatchTabPage = new StopwatchPageWidget(tabWidget);
     clockTabPage = new QWidget(this);

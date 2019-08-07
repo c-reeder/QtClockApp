@@ -42,9 +42,12 @@ void StopwatchPageWidget::startPauseSW()
     {
         swState = started;
         clock.start();
-        clock = clock.addMSecs(-1 * pausedMS);
+        clock = clock.addMSecs(-1000 * (pausedMS / 1000));
         ticker.start(1000);
         ui->startPauseButton->setText("Pause");
+        //cout << "pausedMS: " << pausedMS << endl;
+        //cout << "pausedMS: " << (pausedMS / 1000) * 1000 << endl;
+        //int secsElapsed = static_cast<int>(round(clock.elapsed() / 1000.0));
     } else if (swState == started)
     {
         swState = paused;
@@ -57,7 +60,7 @@ void StopwatchPageWidget::startPauseSW()
 void StopwatchPageWidget::resetSW()
 {
     swState = stopped;
-    cout << "resetSW" << endl;
+    //cout << "resetSW" << endl;
     clock = QTime();
     timeDisplay->display("00:00:00");
     ticker.stop();
@@ -65,7 +68,7 @@ void StopwatchPageWidget::resetSW()
 }
 void StopwatchPageWidget::onTick()
 {
-    cout << "onTick()" << endl;
+    //cout << "onTick()" << endl;
     int secsElapsed = static_cast<int>(round(clock.elapsed() / 1000.0));
 
     int secs = secsElapsed % 60;
